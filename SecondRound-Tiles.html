@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+var cA=0,cB=0,cC=0,cD=0,cE=0,cF=0,cG=0,cH=0,cI=0;
+var cAO=0,cBO=0,cCO=0,cDO=0,cEO=0,cFO=0,cGO=0,cHO=0,cIO=0;
+var cAX=0,cBX=0,cCX=0,cDX=0,cEX=0,cFX=0,cGX=0,cHX=0,cIX=0;
+var C1=0,C2=0,C3=0,C4=0,C5=0,C6=0,C7=0,C8=0
+var v=0;
+var msg="Cross";
+var countT=0;
+
+$(document).ready(function(){
+	function add10_O() {
+		  v=parseInt($("#OScore").text())+10;
+		  $("#OScore").text(v);
+		  alert(msg);
+		}
+	function add10_X() {
+		  v=parseInt($("#XScore").text())+10;
+		  $("#XScore").text(v);
+		  alert(msg);
+		}
+	function Cross(){
+		if(((cAO==1)&&(cBO==1)&&(cCO==1))&&(C1==0)){
+			add10_O();
+			C1=1;
+		}	
+		if(((cCO==1)&&(cFO==1)&&(cIO==1))&&(C2==0)){
+			add10_O();
+			C2=1;
+		}
+		if(((cDO==1)&&(cEO==1)&&(cFO==1))&&(C3==0)){
+			add10_O();
+			C3=1;
+		}
+		if(((cBO==1)&&(cEO==1)&&(cHO==1))&&(C4==0)){
+			add10_O();
+			C4=1;
+		}
+		if(((cGO==1)&&(cHO==1)&&(cIO==1))&&(C5==0)){
+			add10_O();
+			C5=1;
+		}
+		if(((cAO==1)&&(cDO==1)&&(cGO==1))&&(C6==0)){
+			add10_O();
+			C6=1;
+		}
+		if(((cAO==1)&&(cEO==1)&&(cIO==1))&&(C7==0)){
+			add10_O();
+			C7=1;
+		}
+		if(((cGO==1)&&(cEO==1)&&(cCO==1))&&(C8==0)){
+			add10_O();
+			C8=1;
+		}
+		
+		
+		if(((cAX==1)&&(cBX==1)&&(cCX==1))&&(C1==0)){
+			add10_X();
+			C1=1;
+		}	
+		if(((cCX==1)&&(cFX==1)&&(cIX==1))&&(C2==0)){
+			add10_X();
+			C2=1;
+		}
+		if(((cDX==1)&&(cEX==1)&&(cFX==1))&&(C3==0)){
+			add10_X();
+			C3=1;
+		}
+		if(((cBX==1)&&(cEX==1)&&(cHX==1))&&(C4==0)){
+			add10_X();
+			C4=1;
+		}
+		if(((cGX==1)&&(cHX==1)&&(cIX==1))&&(C5==0)){
+			add10_X();
+			C5=1;
+		}
+		if(((cAX==1)&&(cDX==1)&&(cGX==1))&&(C6==0)){
+			add10_X();
+			C6=1;
+		}
+		if(((cAX==1)&&(cEX==1)&&(cIX==1))&&(C7==0)){
+			add10_X();
+			C7=1;
+		}
+		if(((cGX==1)&&(cEX==1)&&(cCX==1))&&(C8==0)){
+			add10_X();
+			C8=1;
+		}
+		countT=countT+1;
+		if(countT==9){
+			if((parseInt($('#OScore').text()))>(parseInt($('#XScore').text()))){
+			    alert(" O-TEAM  has WON the GAME\n\n           Game Over");
+			}
+			else{
+			    alert(" X-TEAM  has WON the GAME\n\n           Game Over");
+			}
+		}
+		
+  }
+	
+	
+	  $("#Ab").click(function(){
+	  if(cA==0){
+	          $("#Ab").val("Ab");
+		       }
+		  else 
+			  {
+			  $("#Ab").replaceWith('<img src="Lock1.png" id="Lock1A"/>');
+			  $('#AbO').replaceWith('<img src="Paper.jpg"/>');
+			  $('#AbX').replaceWith('<img src="Paper.jpg"/>');
+			  countT+=1;
+			  }
+		 
+	    cA++;
+	  }
+	  
+	  );
+	  
+	  $("#Bb").click(function(){
+		  if(cB==0){
+	    $("#Bb").val("Bb");
+		  }
+		  else 
+			  {
+			  $("#Bb").replaceWith('<img src="Lock1.png" id="Lock1B"/>');
+			  $('#BbO').replaceWith('<img src="Paper.jpg"/>');
+			  $('#BbX').replaceWith('<img src="Paper.jpg"/>');
+			  countT+=1;
+			  }
+	    cB++;
+	  }
+	  
+	  );
+	  
+	  $("#Cb").click(function(){
+		  if(cC==0){
+	          $("#Cb").val("Cb");
+		      }
+		  else 
+			  {
+			  $("#Cb").replaceWith('<img src="Lock1.png" id="Lock1C"/>');
+			  $('#CbO').replaceWith('<img src="Paper.jpg"/>');
+			  $('#CbX').replaceWith('<img src="Paper.jpg"/>');
+			  countT+=1;
+			  }
+	    cC++;
+	  }
+	  
+	  );
+	  
+	  $("#Db").click(function(){
+		  if(cD==0){
+	          $("#Db").val("Db");
+		      }
+		  else 
+			  {
+			  $("#Db").replaceWith('<img src="Lock1.png" id="Lock1D"/>');
+			  $('#DbO').replaceWith('<img src="Paper.jpg"/>');
+			  $('#DbX').replaceWith('<img src="Paper.jpg"/>');
+			  countT+=1;
+			  }
+	    cD++;
+	  }
+	  
+	  );
+	  
+	  $("#Eb").click(function(){
+		  if(cE==0){
+	          $("#Eb").val("Eb");
+		      }
+		  else 
+			  {
+			  $("#Eb").replaceWith('<img src="Lock1.png" id="Lock1E"/>');
+			  $('#EbO').replaceWith('<img src="Paper.jpg"/>');
+			  $('#EbX').replaceWith('<img src="Paper.jpg"/>');
+			  countT+=1;
+			  }
+	    cE++;
+	  }
+	  
+	  );
+	  
+	  $("#Fb").click(function(){
+		  if(cF==0){
+	          $("#Fb").val("Fb");
+		      }
+		  else 
+			  {
+			  $("#Fb").replaceWith('<img src="Lock1.png" id="Lock1F"/>');
+			  $('#FbO').replaceWith('<img src="Paper.jpg"/>');
+			  $('#FbX').replaceWith('<img src="Paper.jpg"/>');
+			  countT+=1;
+			  }
+	    cF++;
+	  }
+	  
+	  );
+	  
+	  $("#Gb").click(function(){
+		  if(cG==0){
+	          $("#Gb").val("Gb");
+		      }
+		  else 
+			  {
+			  $("#Gb").replaceWith('<img src="Lock1.png" id="Lock1G"/>');
+			  $('#GbO').replaceWith('<img src="Paper.jpg"/>');
+			  $('#GbX').replaceWith('<img src="Paper.jpg"/>');
+			  countT+=1;
+			  }
+	    cG++;
+	  }
+	  
+	  );
+	  
+	  $("#Hb").click(function(){
+		  if(cH==0){
+	          $("#Hb").val("Hb");
+		      }
+		  else 
+			  {
+			  $("#Hb").replaceWith('<img src="Lock1.png" id="Lock1H"/>');
+			  $('#HbO').replaceWith('<img src="Paper.jpg"/>');
+			  $('#HbX').replaceWith('<img src="Paper.jpg"/>');
+			  countT+=1;
+			  }
+	    cH++;
+	  }
+	  
+	  );
+	  
+	  $("#Ib").click(function(){
+		  if(cI==0){
+	          $("#Ib").val("Ib");
+		      }
+		  else 
+			  {
+			  $("#Ib").replaceWith('<img src="Lock1.png" id="Lock1I"/>');
+			  $('#IbO').replaceWith('<img src="Paper.jpg"/>');
+			  $('#IbX').replaceWith('<img src="Paper.jpg"/>');
+			  countT+=1;
+			  }
+	    cI++;
+	  }
+	  
+	  );
+	  
+	  
+	  
+	  $("#AbO").click(function(){  
+		     $("#Ab").replaceWith('<img src="O1.png" id="O1A"/>');
+		     $('#AbO').replaceWith('<img src="Paper.jpg"/>');
+		     $('#AbX').replaceWith('<img src="Paper.jpg"/>');
+		     v=parseInt($('#OScore').text())+10;
+		     $('#OScore').text(v);
+		     cAO=1;
+		     Cross();
+		  }
+		  );
+	  
+	  $("#BbO").click(function(){  
+			 $("#Bb").replaceWith('<img src="O1.png" id="O1B"/>');
+             $('#BbO').replaceWith('<img src="Paper.jpg"/>');
+             $('#BbX').replaceWith('<img src="Paper.jpg"/>');
+             v=parseInt($('#OScore').text())+10;
+		     $('#OScore').text(v);
+		     cBO=1;
+		     Cross();
+			  }
+			  );
+	  
+	  $("#CbO").click(function(){  
+			 $("#Cb").replaceWith('<img src="O1.png" id="O1C"/>');
+			 $('#CbO').replaceWith('<img src="Paper.jpg"/>');
+			 $('#CbX').replaceWith('<img src="Paper.jpg"/>');
+			 v=parseInt($('#OScore').text())+10;
+		     $('#OScore').text(v);
+		     cCO=1;
+		     Cross();
+	          }
+			  );
+	  
+	  $("#DbO").click(function(){  
+			 $("#Db").replaceWith('<img src="O1.png" id="O1D"/>');
+			 $('#DbO').replaceWith('<img src="Paper.jpg"/>');
+			 $('#DbX').replaceWith('<img src="Paper.jpg"/>');
+			 v=parseInt($('#OScore').text())+10;
+		     $('#OScore').text(v);
+		     cDO=1;
+		     Cross();
+			  }
+			  );
+	  
+	  $("#EbO").click(function(){  
+			 $("#Eb").replaceWith('<img src="O1.png" id="O1E"/>');
+			 $('#EbO').replaceWith('<img src="Paper.jpg"/>');
+			 $('#EbX').replaceWith('<img src="Paper.jpg"/>');
+			 v=parseInt($('#OScore').text())+10;
+		     $('#OScore').text(v);
+		     cEO=1;
+		     Cross();
+			  }
+			  );
+	  
+	  $("#FbO").click(function(){  
+			 $("#Fb").replaceWith('<img src="O1.png" id="O1F"/>');
+			 $('#FbO').replaceWith('<img src="Paper.jpg"/>');
+			 $('#FbX').replaceWith('<img src="Paper.jpg"/>');
+			 v=parseInt($('#OScore').text())+10;
+		     $('#OScore').text(v);
+		     cFO=1;
+		     Cross();
+			  }
+			  );
+	  
+	  $("#GbO").click(function(){  
+			 $("#Gb").replaceWith('<img src="O1.png" id="O1G"/>');
+			 $('#GbO').replaceWith('<img src="Paper.jpg"/>');
+			 $('#GbX').replaceWith('<img src="Paper.jpg"/>');
+			 v=parseInt($('#OScore').text())+10;
+		     $('#OScore').text(v);
+		     cGO=1;
+		     Cross();
+			  }
+			  );
+	  
+	  $("#HbO").click(function(){  
+			 $("#Hb").replaceWith('<img src="O1.png" id="O1H"/>');
+			 $('#HbO').replaceWith('<img src="Paper.jpg"/>');
+			 $('#HbX').replaceWith('<img src="Paper.jpg"/>');
+			 v=parseInt($('#OScore').text())+10;
+		     $('#OScore').text(v);
+		     cHO=1;
+		     Cross();
+			  }
+			  );
+	  
+	  $("#IbO").click(function(){  
+			 $("#Ib").replaceWith('<img src="O1.png" id="O1I"/>');
+			 $('#IbO').replaceWith('<img src="Paper.jpg"/>');
+			 $('#IbX').replaceWith('<img src="Paper.jpg"/>');
+			 v=parseInt($('#OScore').text())+10;
+		     $('#OScore').text(v);
+		     cIO=1;
+		     Cross();
+			  }
+			  );
+	  
+	  
+	  
+	  
+	  $("#AbX").click(function(){  
+			     $("#Ab").replaceWith('<img src="X1.png" id="X1A"/>');
+			     $('#AbO').replaceWith('<img src="Paper.jpg"/>');
+				 $('#AbX').replaceWith('<img src="Paper.jpg"/>');
+				 v=parseInt($('#XScore').text())+10;
+			     $('#XScore').text(v);
+			     cAX=1;
+			     Cross();
+	             }
+			     );
+		  
+		  $("#BbX").click(function(){  
+				 $("#Bb").replaceWith('<img src="X1.png" id="X1B"/>');
+				 $('#BbO').replaceWith('<img src="Paper.jpg"/>');
+				 $('#BbX').replaceWith('<img src="Paper.jpg"/>');
+				 v=parseInt($('#XScore').text())+10;
+			     $('#XScore').text(v);
+			     cBX=1;
+			     Cross();
+		         }
+				 );
+		  
+		  $("#CbX").click(function(){  
+				 $("#Cb").replaceWith('<img src="X1.png" id="X1C"/>');
+				 $('#CbO').replaceWith('<img src="Paper.jpg"/>');
+				 $('#CbX').replaceWith('<img src="Paper.jpg"/>');
+				 v=parseInt($('#XScore').text())+10;
+			     $('#XScore').text(v);
+			     cCX=1;
+			     Cross();
+				  }
+				  );
+		  
+		  $("#DbX").click(function(){  
+				 $("#Db").replaceWith('<img src="X1.png" id="X1D"/>');
+				 $('#DbO').replaceWith('<img src="Paper.jpg"/>');
+				 $('#DbX').replaceWith('<img src="Paper.jpg"/>');
+				 v=parseInt($('#XScore').text())+10;
+			     $('#XScore').text(v);
+			     cDX=1;
+			     Cross();
+				  }
+				  );
+		  
+		  $("#EbX").click(function(){  
+				 $("#Eb").replaceWith('<img src="X1.png" id="X1E"/>');
+				 $('#EbO').replaceWith('<img src="Paper.jpg"/>');
+				 $('#EbX').replaceWith('<img src="Paper.jpg"/>');
+				 v=parseInt($('#XScore').text())+10;
+			     $('#XScore').text(v);
+			     cEX=1;
+			     Cross();
+				  }
+				  );
+		  
+		  $("#FbX").click(function(){  
+				 $("#Fb").replaceWith('<img src="X1.png" id="X1F"/>');
+				 $('#FbO').replaceWith('<img src="Paper.jpg"/>');
+				 $('#FbX').replaceWith('<img src="Paper.jpg"/>');
+				 v=parseInt($('#XScore').text())+10;
+			     $('#XScore').text(v);
+			     cFX=1;
+			     Cross();
+				  }
+				  );
+		  
+		  $("#GbX").click(function(){  
+				 $("#Gb").replaceWith('<img src="X1.png" id="X1G"/>');
+				 $('#GbO').replaceWith('<img src="Paper.jpg"/>');
+				 $('#GbX').replaceWith('<img src="Paper.jpg"/>');
+				 v=parseInt($('#XScore').text())+10;
+			     $('#XScore').text(v);
+			     cGX=1;
+			     Cross();
+				  }
+				  );
+		  
+		  $("#HbX").click(function(){  
+				 $("#Hb").replaceWith('<img src="X1.png" id="X1H"/>');
+				 $('#HbO').replaceWith('<img src="Paper.jpg"/>');
+				 $('#HbX').replaceWith('<img src="Paper.jpg"/>');
+				 v=parseInt($('#XScore').text())+10;
+			     $('#XScore').text(v);
+			     cHX=1;
+			     Cross();
+		         }     
+				 );
+		  
+		  $("#IbX").click(function(){  
+				 $("#Ib").replaceWith('<img src="X1.png" id="X1I"/>');
+				 $('#IbO').replaceWith('<img src="Paper.jpg"/>');
+				 $('#IbX').replaceWith('<img src="Paper.jpg"/>');
+				 v=parseInt($('#XScore').text())+10;
+			     $('#XScore').text(v);
+			     cIX=1;
+			     Cross();
+				  }
+				  );
+	  
+	  
+
+});
+</script>
+
+<style>
+body {background-image:url("Background2.jpg");
+background-position:fill;}
+
+.bigbutton { width: 150px; 
+height : 155px;
+font-size:30px;
+color:black;
+font-family:Lucida Calligraphy;
+background-image:url(Button5.jpg);
+background-color:#779999;
+border-style:outset;
+   border-color:#CCCCCC;
+   border-width:2px;
+ } 
+ 
+.smallbutton{width: 20px; 
+height : 22px;
+ 
+ }
+ 
+ .imag{
+ border-style:solid;
+border-color:#DDDDDD;
+border-width:1px;
+ }
+
+table.nospace {
+	padding: 0; margin: 0;
+	border-collapse: collapse;
+	background: #FFFFFF;
+}
+table.nospace tr {
+	padding: 0; margin: 0;
+	background: #FF0000;
+}
+table.nospace td {
+	padding: 0; margin: 0;
+	background: #FF00FF;
+}
+
+table.Bottom_Left{
+position:absolute;
+bottom:0px;
+left:0px;
+}
+
+table.Bottom_Right{
+position:absolute;
+bottom:0px;
+Right:0px;
+}
+
+
+</style>
+</head>
+<title>Tic  Tac   Toe</title>
+
+<body>
+<br><br><br>
+<center>
+<table border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td></td>
+<td><input id="Ab" type="button" class="bigbutton" name="A" value="Android"></td>
+<td><input id="Bb" type="button" class="bigbutton" name="B" value="B"></td>
+<td><input id="Cb" type="button" class="bigbutton" name="C" value="C"></td>
+<td></td>
+
+<tr>
+<td><img src="O1_1.png"/></td>
+<td><input id="Db" type="button" class="bigbutton" name="D" value="D"></td>
+<td><input id="Eb" type="button" class="bigbutton" name="E" value="E"></td>
+<td><input id="Fb" type="button" class="bigbutton" name="F" value="F"></td>
+<td><img src="X1_1.png"/></td>
+</tr>
+
+<tr>
+<td><center><font size="10" id="OScore">00</font></center></td>
+<td><input id="Gb" type="button" class="bigbutton" name="G" value="G"></td>
+<td><input id="Hb" type="button" class="bigbutton" name="H" value="H"></td>
+<td><input id="Ib" type="button" class="bigbutton" name="I" value="I"></td>
+<td><center><font size="10" id="XScore">00</font></center></td>
+<td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</table>
+</center>
+
+<table border=0 class="Bottom_Left" cellspacing=0 cellpadding=0>
+<tr>
+<td><input id="AbO" type="button" class="smallbutton" name="A" value="A"></td>
+<td><input id="BbO" type="button" class="smallbutton" name="B" value="B"></td>
+<td><input id="CbO" type="button" class="smallbutton" name="C" value="C"></td>
+</tr>
+<tr>
+<td><input id="DbO" type="button" class="smallbutton" name="D" value="D"></td>
+<td><input id="EbO" type="button" class="smallbutton" name="E" value="E"></td>
+<td><input id="FbO" type="button" class="smallbutton" name="F" value="F"></td>
+</tr>
+<tr>
+<td><input id="GbO" type="button" class="smallbutton" name="G" value="G"></td>
+<td><input id="HbO" type="button" class="smallbutton" name="H" value="H"></td>
+<td><input id="IbO" type="button" class="smallbutton" name="I" value="I"></td>
+</tr>
+</table>
+
+<table border=0 class="Bottom_Right" cellspacing=0 cellpadding=0>
+<tr>
+<td><input id="AbX" type="button" class="smallbutton" name="A" value="A"></td>
+<td><input id="BbX" type="button" class="smallbutton" name="B" value="B"></td>
+<td><input id="CbX" type="button" class="smallbutton" name="C" value="C"></td>
+</tr>
+<tr>
+<td><input id="DbX" type="button" class="smallbutton" name="D" value="D"></td>
+<td><input id="EbX" type="button" class="smallbutton" name="E" value="E"></td>
+<td><input id="FbX" type="button" class="smallbutton" name="F" value="F"></td>
+</tr>
+<tr>
+<td><input id="GbX" type="button" class="smallbutton" name="G" value="G"></td>
+<td><input id="HbX" type="button" class="smallbutton" name="H" value="H"></td>
+<td><input id="IbX" type="button" class="smallbutton" name="I" value="I"></td>
+</tr>
+</table>
+
+</body>
+
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+
+var cA=0,cB=0,cC=0,cD=0,cE=0,cF=0,cG=0,cH=0,cI=0;
+var cAO=0,cBO=0,cCO=0,cDO=0,cEO=0,cFO=0,cGO=0,cHO=0,cIO=0;
+var cAX=0,cBX=0,cCX=0,cDX=0,cEX=0,cFX=0,cGX=0,cHX=0,cIX=0;
+var C1=0,C2=0,C3=0,C4=0,C5=0,C6=0,C7=0,C8=0
+var v=0;
+var countTB=0,countT=0;
+
+$(document).ready(function(){
+	
+	$('#AbO').click(function(){
+		  $("#Ab").replaceWith('<img src="Part1.png"/>');
+		  $('#AbO').replaceWith('<img src="Paper.jpg"/>');
+		  v=parseInt($("#Score").text())+10;
+		  $("#Score").text(v);
+		  countTB++;
+		  countT++;
+		  if(countTB==9)
+			  alert("      Get Your Bonus Question      ");
+		  if((countTB<9)&&(countT==9))
+			  alert("             Game Over          ");
+	  }
+	  );
+	  
+	  $('#BbO').click(function(){
+		    $('#Bb').replaceWith('<img src="Part2.png"/>');	 
+		    $('#BbO').replaceWith('<img src="Paper.jpg"/>');
+		    v=parseInt($("#Score").text())+10;
+			  $("#Score").text(v);
+			  countTB++;
+			  countT++;
+			  if(countTB==9)
+				  alert("      Get Your Bonus Question      ");
+			  if((countTB!=9) &&(countT==9))
+				  alert("             Game Over          ");
+		  }
+		  );
+	  
+	  $('#CbO').click(function(){
+		    $('#Cb').replaceWith('<img src="Part3.png"/>');	
+		    $('#CbO').replaceWith('<img src="Paper.jpg"/>');
+		    v=parseInt($("#Score").text())+10;
+			  $("#Score").text(v);
+			  countTB++;
+			  countT++;
+			  if(countTB==9)
+				  alert("      Get Your Bonus Question      ");
+			  if((countTB!=9) &&(countT==9))
+				  alert("             Game Over          ");
+	     }
+	     );
+	  
+	  $('#DbO').click(function(){
+		    $('#Db').replaceWith('<img src="Part4.png"/>');	
+		    $('#DbO').replaceWith('<img src="Paper.jpg"/>');
+		    v=parseInt($("#Score").text())+10;
+			  $("#Score").text(v);
+			  countTB++;
+			  countT++;
+			  if(countTB==9)
+				  alert("      Get Your Bonus Question      ");
+			  if((countTB!=9) &&(countT==9))
+				  alert("             Game Over          ");
+		  }
+		  );
+	  
+	  $('#EbO').click(function(){
+		    $('#Eb').replaceWith('<img src="Part5.png"/>');
+		    $('#EbO').replaceWith('<img src="Paper.jpg"/>');
+		    v=parseInt($("#Score").text())+10;
+			  $("#Score").text(v);
+			  countTB++;
+			  countT++;
+			  if(countTB==9)
+				  alert("      Get Your Bonus Question      ");
+			  if((countTB!=9) &&(countT==9))
+				  alert("             Game Over          ");
+		  }
+		  );
+	  
+	  $('#FbO').click(function(){
+		    $('#Fb').replaceWith('<img src="Part6.png"/>');	 
+		    $('#FbO').replaceWith('<img src="Paper.jpg"/>');
+		    v=parseInt($("#Score").text())+10;
+			  $("#Score").text(v);
+			  countTB++;
+			  countT++;
+			  if(countTB==9)
+				  alert("      Get Your Bonus Question      ");
+			  if((countTB!=9) &&(countT==9))
+				  alert("             Game Over          ");
+		  }
+		  );
+	  
+	  $('#GbO').click(function(){
+		    $('#Gb').replaceWith('<img src="Part7.png"/>');	
+		    $('#GbO').replaceWith('<img src="Paper.jpg"/>');
+		    v=parseInt($("#Score").text())+10;
+			  $("#Score").text(v);
+			  countTB++;
+			  countT++;
+			  if(countTB==9)
+				  alert("      Get Your Bonus Question      ");
+			  if((countTB!=9) &&(countT==9))
+				  alert("             Game Over          ");
+		  }
+		  );
+	  
+	  
+	  $('#HbO').click(function(){
+		    $('#Hb').replaceWith('<img src="Part8.png"/>');	 
+		    $('#HbO').replaceWith('<img src="Paper.jpg"/>');
+		    v=parseInt($("#Score").text())+10;
+			  $("#Score").text(v);
+			  countTB++;
+			  countT++;
+			  if(countTB==9)
+				  alert("      Get Your Bonus Question      ");
+			  if((countTB!=9) &&(countT==9))
+				  alert("             Game Over          ");
+		  }
+		  );
+	  
+	  $('#IbO').click(function(){
+		    $('#Ib').replaceWith('<img src="Part9.png"/>');	 
+		    $('#IbO').replaceWith('<img src="Paper.jpg"/>');
+		    v=parseInt($("#Score").text())+10;
+			  $("#Score").text(v);
+			  countTB++;
+			  countT++;
+			  if(countTB==9)
+				  alert("      Get Your Bonus Question      ");
+			  if((countTB!=9) &&(countT==9))
+				  alert("             Game Over          ");
+		  }
+		  );
+	  
+	  
+	$("#Ab").click(function(){
+		  if(cA==0){
+		          $("#Ab").val("Ab");
+			       }
+			  else 
+				  {
+				  $("#Ab").replaceWith('<img src="Lock1.png" id="Lock1A"/>');
+				  $('#AbO').replaceWith('<img src="Paper.jpg"/>');
+				  countT++;
+				  if(countT==9)
+					  alert("          Game Over          ");
+				  }
+			 
+		    cA++;
+		  }
+		  
+		  );
+		  
+		  $("#Bb").click(function(){
+			  if(cB==0){
+		    $("#Bb").val("Bb");
+			  }
+			  else 
+				  {
+				  $("#Bb").replaceWith('<img src="Lock1.png" id="Lock1B"/>');
+				  $('#BbO').replaceWith('<img src="Paper.jpg"/>');
+				  countT++;
+				  if(countT==9)
+					  alert("          Game Over          ");
+				 
+				  }
+		    cB++;
+		  }
+		  
+		  );
+		  
+		  $("#Cb").click(function(){
+			  if(cC==0){
+		          $("#Cb").val("Cb");
+			      }
+			  else 
+				  {
+				  $("#Cb").replaceWith('<img src="Lock1.png" id="Lock1C"/>');
+				  $('#CbO').replaceWith('<img src="Paper.jpg"/>');
+				  countT++;
+				  if(countT==9)
+					  alert("          Game Over          ");
+				  }
+		    cC++;
+		  }
+		  
+		  );
+		  
+		  $("#Db").click(function(){
+			  if(cD==0){
+		          $("#Db").val("Db");
+			      }
+			  else 
+				  {
+				  $("#Db").replaceWith('<img src="Lock1.png" id="Lock1D"/>');
+				  $('#DbO').replaceWith('<img src="Paper.jpg"/>');
+				  countT++;
+				  if(countT==9)
+					  alert("          Game Over          ");
+				  }
+		    cD++;
+		  }
+		  
+		  );
+		  
+		  $("#Eb").click(function(){
+			  if(cE==0){
+		          $("#Eb").val("Eb");
+			      }
+			  else 
+				  {
+				  $("#Eb").replaceWith('<img src="Lock1.png" id="Lock1E"/>');
+				  $('#EbO').replaceWith('<img src="Paper.jpg"/>');
+				  countT++;
+				  if(countT==9)
+					  alert("          Game Over          ");
+				  }
+		    cE++;
+		  }
+		  
+		  );
+		  
+		  $("#Fb").click(function(){
+			  if(cF==0){
+		          $("#Fb").val("Fb");
+			      }
+			  else 
+				  {
+				  $("#Fb").replaceWith('<img src="Lock1.png" id="Lock1F"/>');
+				  $('#FbO').replaceWith('<img src="Paper.jpg"/>');
+				  countT++;
+				  if(countT==9)
+					  alert("          Game Over          ");
+				  }
+		    cF++;
+		  }
+		  
+		  );
+		  
+		  $("#Gb").click(function(){
+			  if(cG==0){
+		          $("#Gb").val("Gb");
+			      }
+			  else 
+				  {
+				  $("#Gb").replaceWith('<img src="Lock1.png" id="Lock1G"/>');
+				  $('#GbO').replaceWith('<img src="Paper.jpg"/>');
+				  countT++;
+				  if(countT==9)
+					  alert("          Game Over          ");
+				  }
+		    cG++;
+		  }
+		  
+		  );
+		  
+		  $("#Hb").click(function(){
+			  if(cH==0){
+		          $("#Hb").val("Hb");
+			      }
+			  else 
+				  {
+				  $("#Hb").replaceWith('<img src="Lock1.png" id="Lock1H"/>');
+				  $('#HbO').replaceWith('<img src="Paper.jpg"/>');
+				  countT++;
+				  if(countT==9)
+					  alert("          Game Over          ");
+				  }
+		    cH++;
+		  }
+		  
+		  );
+		  
+		  $("#Ib").click(function(){
+			  if(cI==0){
+		          $("#Ib").val("Ib");
+			      }
+			  else 
+				  {
+				  $("#Ib").replaceWith('<img src="Lock1.png" id="Lock1I"/>');
+				  $('#IbO').replaceWith('<img src="Paper.jpg"/>');
+				  countT++;
+				  if(countT==9)
+					  alert("          Game Over          ");
+				  }
+		    cI++;
+		  }
+		  
+		  );
+		  
+});
+</script>
+
+<style>
+
+.bigbutton { width: 150px; 
+height : 150px;
+ } 
+ 
+.smallbutton{width: 20px; 
+height : 20px;
+ }
+
+table.nospace {
+	padding: 0; margin: 0;
+	border-collapse: collapse;
+	background: #FFFFFF;
+}
+table.nospace tr {
+	padding: 0; margin: 0;
+	background: #FF0000;
+}
+table.nospace td {
+	padding: 0; margin: 0;
+	background: #FF00FF;
+}
+
+table.Bottom_Left{
+position:absolute;
+bottom:0px;
+left:0px;
+}
+
+table.Bottom_Right{
+position:absolute;
+bottom:0px;
+Right:0px;
+}
+
+
+</style>
+</head>
+
+<body>
+<br><br>
+<center>
+<table border=0 cellspacing=0 cellpadding=0>
+<td><input id="Ab" type="button" class="bigbutton" name="A" value="A"></td>
+<td><input id="Bb" type="button" class="bigbutton" name="B" value="B"></td>
+<td><input id="Cb" type="button" class="bigbutton" name="C" value="C"></td>
+</tr>
+<tr>
+<td><input id="Db" type="button" class="bigbutton" name="D" value="D"></td>
+<td><input id="Eb" type="button" class="bigbutton" name="E" value="E"></td>
+<td><input id="Fb" type="button" class="bigbutton" name="F" value="F"></td>
+</tr>
+<tr>
+<td><input id="Gb" type="button" class="bigbutton" name="G" value="G"></td>
+<td><input id="Hb" type="button" class="bigbutton" name="H" value="H"></td>
+<td><input id="Ib" type="button" class="bigbutton" name="I" value="I"></td>
+</tr>
+</table>
+</center>
+
+<center>
+<h1>Score   :   <font size="10" id="Score">00</font></h1>
+</center>
+
+<table border=0 class="Bottom_Left" cellspacing=0 cellpadding=0>
+<tr>
+<td><input id="AbO" type="button" class="smallbutton" name="A" value="A"></td>
+<td><input id="BbO" type="button" class="smallbutton" name="B" value="B"></td>
+<td><input id="CbO" type="button" class="smallbutton" name="C" value="C"></td>
+</tr>
+<tr>
+<td><input id="DbO" type="button" class="smallbutton" name="D" value="D"></td>
+<td><input id="EbO" type="button" class="smallbutton" name="E" value="E"></td>
+<td><input id="FbO" type="button" class="smallbutton" name="F" value="F"></td>
+</tr>
+<tr>
+<td><input id="GbO" type="button" class="smallbutton" name="G" value="G"></td>
+<td><input id="HbO" type="button" class="smallbutton" name="H" value="H"></td>
+<td><input id="IbO" type="button" class="smallbutton" name="I" value="I"></td>
+</tr>
+</table>
+
+
+</body>
+
+</html>
